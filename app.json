@@ -5,6 +5,10 @@
       "bundler": "metro"
     },
     "name": "scratch",
-    "slug": "scratch"
+    "slug": "scratch",
+    "splash": {
+      "image": "./assets/splash.png",
+      "backgroundColor": "#FFFFFF"
+    }
   }
 }
