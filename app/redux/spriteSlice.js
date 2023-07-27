@@ -19,16 +19,16 @@ const spriteSlice = createSlice({
   reducers: {
     setX(state, action) {
       if (action.payload.sprite === "bob") {
-        state["bobState"].x = action.payload.value;
+        state["bobState"].x += action.payload.value;
       } else {
-        state["catState"].x = action.payload.value;
+        state["catState"].x += action.payload.value;
       }
     },
     setY(state, action) {
       if (action.payload.sprite === "bob") {
-        state["bobState"].y = action.payload.value;
+        state["bobState"].y += action.payload.value;
       } else {
-        state["catState"].y = action.payload.value;
+        state["catState"].y += action.payload.value;
       }
     },
     setUsing(state, action) {
@@ -39,7 +39,6 @@ const spriteSlice = createSlice({
       }
     },
     setActions(state, action) {
-      console.log(state, action);
       if (action.payload.sprite === "bob") {
         state["bobState"].actions = [
           ...state["bobState"].actions,
@@ -52,9 +51,26 @@ const spriteSlice = createSlice({
         ];
       }
     },
+    setInitial: (state) => {
+      return {
+        bobState: {
+          x: 175,
+          y: 175,
+          using: false,
+          actions: [],
+        },
+        catState: {
+          x: 175,
+          y: 175,
+          using: true,
+          actions: [],
+        },
+      };
+    },
   },
 });
 
-export const { setX, setY, setUsing, setActions } = spriteSlice.actions;
+export const { setX, setY, setUsing, setActions, setInitial } =
+  spriteSlice.actions;
 
 export default spriteSlice.reducer;
