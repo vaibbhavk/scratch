@@ -22,8 +22,6 @@ export default function Home() {
 
   const play = () => {
     for (a in bobState["actions"]) {
-      console.log(a);
-
       if (bobState["actions"][a].id === "move_x_50") {
         dispatch(
           setX({

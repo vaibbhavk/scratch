@@ -9,6 +9,20 @@
     "splash": {
       "image": "./assets/splash.png",
       "backgroundColor": "#FFFFFF"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "316bf50a-973a-4783-973e-e7c00523b5f3"
+      }
+    },
+    "owner": "vaibbhavk",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/316bf50a-973a-4783-973e-e7c00523b5f3"
+    },
+    "android": {},
+    "ios": {}
   }
 }

@@ -1,7 +1,5 @@
-import { useEffect } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import { useSelector } from "react-redux";
-import { Ionicons } from "@expo/vector-icons";
 import { useImage, Canvas } from "@shopify/react-native-skia";
 import SpriteImage from "./SpriteImage";
 

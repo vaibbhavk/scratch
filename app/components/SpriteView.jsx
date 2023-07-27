@@ -1,11 +1,4 @@
-import {
-  Button,
-  Image,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { COLORS } from "../../constants";
 import bob from "../../assets/images/bob.png";
 import cat from "../../assets/images/cat.png";

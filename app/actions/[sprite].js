@@ -5,13 +5,12 @@ import {
   FlatList,
   TouchableOpacity,
 } from "react-native";
-import { Stack, useLocalSearchParams, useRouter } from "expo-router";
+import { Stack, useLocalSearchParams } from "expo-router";
 import { ACTIONS } from "../../constants";
 import { useDispatch, useSelector } from "react-redux";
 import { setActions } from "../redux/spriteSlice";
 
 export default function Actions() {
-  const router = useRouter();
   const params = useLocalSearchParams();
   const { sprite } = params;
 
