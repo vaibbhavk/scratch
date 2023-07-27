@@ -1,10 +1,9 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { Button, Text, Image, TouchableOpacity } from "react-native";
+import { Image, TouchableOpacity } from "react-native";
 import logo from "../assets/logo.png";
-import { useState } from "react";
 
-import { Stack, useRouter } from "expo-router";
+import { Stack } from "expo-router";
 import Environment from "./components/Environment";
 import SpritesAndCoords from "./components/SpritesAndCoords";
 import SpriteView from "./components/SpriteView";
