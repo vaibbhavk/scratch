@@ -4,15 +4,15 @@ const spriteSlice = createSlice({
   name: "sprite",
   initialState: {
     bobState: {
-      x: 150,
-      y: 150,
-      using: true,
+      x: 175,
+      y: 175,
+      using: false,
       actions: [],
     },
     catState: {
-      x: 150,
-      y: 150,
-      using: false,
+      x: 175,
+      y: 175,
+      using: true,
       actions: [],
     },
   },
@@ -39,8 +39,7 @@ const spriteSlice = createSlice({
       }
     },
     setActions(state, action) {
-      state.actions = [...state.actions, action.payload];
-
+      console.log(state, action);
       if (action.payload.sprite === "bob") {
         state["bobState"].actions = [
           ...state["bobState"].actions,

@@ -15,11 +15,11 @@ const SpritesAndCoords = () => {
           </View>
           <View style={styles.sprite}>
             <Text>x:&nbsp;</Text>
-            <Text style={styles.text}>{catState.x - 150}</Text>
+            <Text style={styles.text}>{catState.x - 175}</Text>
           </View>
           <View style={styles.sprite}>
             <Text>y:&nbsp;</Text>
-            <Text style={styles.text}>{catState.y - 150}</Text>
+            <Text style={styles.text}>{catState.y - 175}</Text>
           </View>
         </View>
       )}
@@ -32,11 +32,11 @@ const SpritesAndCoords = () => {
           </View>
           <View style={styles.sprite}>
             <Text>x:&nbsp;</Text>
-            <Text style={styles.text}>{bobState.x - 150}</Text>
+            <Text style={styles.text}>{bobState.x - 175}</Text>
           </View>
           <View style={styles.sprite}>
             <Text>y:&nbsp;</Text>
-            <Text style={styles.text}>{bobState.y - 150}</Text>
+            <Text style={styles.text}>{bobState.y - 175}</Text>
           </View>
         </View>
       )}

@@ -1,15 +1,12 @@
 import { useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { useSelector } from "react-redux";
-import { bob, cat } from "../../constants";
-import { useImage, Image, Canvas } from "@shopify/react-native-skia";
+import { Ionicons } from "@expo/vector-icons";
+import { useImage, Canvas } from "@shopify/react-native-skia";
+import SpriteImage from "./SpriteImage";
 
 const Environment = () => {
   const { bobState, catState } = useSelector((state) => state.sprite);
-
-  useEffect(() => {
-    return () => {};
-  }, []);
 
   const bob = useImage(require("../../assets/images/bob.png"));
   const cat = useImage(require("../../assets/images/cat.png"));
@@ -17,24 +14,10 @@ const Environment = () => {
   return (
     <Canvas style={styles.container}>
       {cat && catState.using && (
-        <Image
-          image={cat}
-          fit="contain"
-          x={catState.x}
-          y={catState.y}
-          width={50}
-          height={50}
-        />
+        <SpriteImage sprite={cat} spriteState={catState} />
       )}
       {bob && bobState.using && (
-        <Image
-          image={bob}
-          fit="contain"
-          x={bobState.x}
-          y={bobState.y}
-          width={50}
-          height={50}
-        />
+        <SpriteImage sprite={bob} spriteState={bobState} />
       )}
     </Canvas>
   );

@@ -9,15 +9,17 @@ import {
 import { COLORS } from "../../constants";
 import bob from "../../assets/images/bob.png";
 import cat from "../../assets/images/cat.png";
-import plus from "../../assets/images/plus.png";
 import { useDispatch, useSelector } from "react-redux";
 import { setUsing } from "../redux/spriteSlice";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 
 const SpriteView = () => {
   const { bobState, catState } = useSelector((state) => state.sprite);
   const dispatch = useDispatch();
+
+  const router = useRouter();
 
   return (
     <View style={styles.container}>
@@ -42,7 +44,12 @@ const SpriteView = () => {
             <Image source={cat} style={styles.image} />
 
             <TouchableOpacity style={styles.button}>
-              <Text style={{ color: "white" }}>Add actions</Text>
+              <Text
+                style={{ color: "white" }}
+                onPress={() => router.push("/actions/cat")}
+              >
+                Add actions
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -67,7 +74,10 @@ const SpriteView = () => {
           <View style={styles.spriteView}>
             <Image source={bob} style={styles.image} />
 
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => router.push("/actions/bob")}
+            >
               <Text style={{ color: "white" }}>Add actions</Text>
             </TouchableOpacity>
           </View>
